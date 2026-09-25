@@ -23,7 +23,33 @@ Final project for the module **TAE-IA · Module 6 — Real-Time Deep Learning Ap
 
 ## Architecture
 
+
+
 Mixed pipeline (sequential with a conditional early rejection branch):
+
+```
+Image/Video  ──► YOLOv8 (detection, always runs)
+             ──► BLIP   (captioning, always runs)
+             ──► Gatekeeper BiomedCLIP zero-shot (threshold 0.55)
+                     │
+              ┌──────┴───────┐
+              │              │
+           fails           passes
+              │              │
+              ▼              ▼
+          Rejection     BiomedCLIP (type + status)
+              │              │
+              │       Optional── CLAP (acoustic event)
+              │        Audio  ── Whisper (ASR transcription)
+              │              │
+              └───────┬──────┘
+                      ▼
+          Integrated text report + optional TTS audio (XTTS, disabled by default)
+                      │
+                      ▼
+        CSV Log + JSON evidence — chained SHA-256 hash (ALWAYS written)
+
+```
 
 
 ### Key Principles:
