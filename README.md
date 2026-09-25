@@ -1,4 +1,4 @@
-# SATDM — Inspector de Dispositivos Médicos (Visión + Audio)
+ SATDM — Inspector de Dispositivos Médicos (Visión + Audio)
 
 Proyecto final del módulo **TAE-IA · Módulo 6 — Aplicaciones de Deep Learning en Tiempo Real**
 (Cinvestav Guadalajara). Extiende el proyecto de investigación **SATDM** (Sistema Auditable de
@@ -74,7 +74,9 @@ Justificación completa (tamaño, por qué ese modelo y no otro) en `docs/M6_Rep
 ## Requisitos
 
 - Python 3.10+ (probado en Google Colab)
-- GPU opcional (el pipeline corre en CPU con `DEVICE="cpu"`, solo más lento)
+- GPU opcional — probado en ambos modos: con GPU T4 (15.6 GB), los 5 modelos cargados en conjunto
+  (YOLO+BiomedCLIP+BLIP+Whisper+CLAP) ocupan **2.86 GB de VRAM** medidos en el autodiagnóstico; sin
+  GPU asignada corre en CPU con `DEVICE="cpu"`, solo más lento
 - Cuenta de Google Drive si se quiere usar los pesos YOLO propios (`pesos_medicos_yolov8.pt`)
 - Ver `requirements.txt` para el listado exacto de paquetes
 
