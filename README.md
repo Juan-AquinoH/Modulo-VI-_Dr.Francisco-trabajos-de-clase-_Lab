@@ -1,4 +1,4 @@
- SATDM — Inspector de Dispositivos Médicos (Visión + Audio)
+## SATDM — Inspector de Dispositivos Médicos (Visión + Audio)
 
 Proyecto final del módulo **TAE-IA · Módulo 6 — Aplicaciones de Deep Learning en Tiempo Real**
 (Cinvestav Guadalajara). Extiende el proyecto de investigación **SATDM** (Sistema Auditable de
