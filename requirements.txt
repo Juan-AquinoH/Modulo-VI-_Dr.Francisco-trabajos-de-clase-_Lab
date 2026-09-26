@@ -1,0 +1,15 @@
+# Dependencias exactas instaladas en app_inspector_SATDM_Produccion_FINAL.ipynb
+# (celda 1 — instalación y verificación de dependencias)
+
+transformers==4.49.0
+huggingface-hub==0.29.1
+ultralytics>=8.3.0,<9
+open_clip_torch
+gradio
+librosa
+soundfile
+opencv-python-headless
+
+# torch/torchaudio no se fijan aquí: Colab ya trae una versión compatible con su GPU/CUDA.
+# En un entorno local sin Colab, instalar la build de PyTorch que corresponda a tu hardware
+# siguiendo https://pytorch.org/get-started/locally/ antes de instalar lo anterior.
